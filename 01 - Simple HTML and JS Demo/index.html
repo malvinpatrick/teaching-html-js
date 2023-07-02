@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Basic Javascript</title>
+  </head>
+  <body style="padding: 10px">
+    <div
+      id="myShape"
+      style="
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        left: 0;
+      "
+    ></div>
+
+    <br />
+    <button onclick="moveRightBox()">Move the box</button>
+    <button onclick="reset()">Reset</button>
+  </body>
+
+  <script>
+    var leftMyShape = 0;
+
+    function reset() {
+      leftMyShape = 0;
+
+      var myShape = document.getElementById("myShape");
+      myShape.style.left = leftMyShape + "px";
+    }
+
+    function moveRightBox() {
+      leftMyShape += 20;
+
+      var myShape = document.getElementById("myShape");
+      myShape.style.left = leftMyShape + "px";
+    }
+  </script>
+</html>
